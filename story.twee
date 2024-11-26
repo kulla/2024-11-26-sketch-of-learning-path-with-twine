@@ -1,201 +1,119 @@
 :: StoryTitle
-Was ist der Grenzwert einer Folge?
+Learning Path for English
 
 
 :: StoryData
 {
-  "ifid": "7D456C74-2240-43FA-8B18-5104A79F4605",
+  "ifid": "7D456C74-2240-23FA-8B18-5104A79F4605",
   "format": "Snowman",
   "format-version": "2.0.2",
-  "start": "Start",
   "zoom": 0.6
 }
 
 
-:: Erklärung, wieso es eine formale Definition braucht {"position":"1150,900","size":"100,100"}
-TODO: Erklären, wieso man eine formale Definition in der Mathematik benötigt.
-
-[[Weiter mit dem Kurs|Formale Definition des Grenzwerts finden]]
-
-
-:: Erklärung, wieso es keine formale Definition ist {"position":"900,900","size":"100,100"}
-TODO: Erklären, wieso es keine formale Definition ist.
-
-[[Weiter mit dem Kurs|Formale Definition des Grenzwerts finden]]
-
-
-:: Formale Definition des Grenzwerts {"position":"1025,1150","size":"100,100"}
-Deine Antwort: <%- s.givenDefinition %>
-
-Eine mögliche formale Definition ist: „Eine Folge §(a_n)_{n\in\mathbb N}§ hat den Grenzwert §a§, wenn es für jeden noch so kleinen vorgegebenen Maximalabstand §\epsilon > 0§ fast alle Folgeglieder einen Abstand kleiner als §\varepsilon§ vom Grenzwert haben. Sprich es gibt ein Folgeglied §a_N§, ab dem alle darauffolgenden Folgeglieder §a_n§ mit §n\ge N§ einen Abstand §|a-a_n|<\varepsilon§ vom Grenzwert §a§ haben.“
-
-Dies können wir verkürzen: „Eine Folge §(a_n)_{n\in\N}§ hat den Grenzwert §a§, wenn es für alle §\varepsilon > 0§ ein Index §N\in\N§ gibt, so dass §|a-a_n|<\varepsilon§ für alle §n\ge N§ ist.“
-
-Dies ist die Definition, wie du sie auch in Lehrbücher und Skripte findest.
-
-
-:: Formale Definition des Grenzwerts finden {"position":"1025,900","size":"100,100"}
-Richtig, die Vorstellung „<%= s.chosenIntuition?.value %>“ ist zwar eine gute Intuition, sie reicht aber als formale Definition nicht aus. Wie könnte eine solche formale Definition aussehen?
-
-Starten wir hierzu mit der Intuition „<%= s.chosenIntuition?.value %>“ und versuchen wir, diese schrittweise zu konkretisieren. Dabei wird es uns helfen, den Fokus auf den Abstand §|a-a_n|§ zwischen den Folgengliedern und den Grenzwert zu legen. Dieser gibt an, wie groß jeweils der Unterschied bzw. der Fehler zwischen dem Folgeglied und dem Grenzwert ist.
-
-Wenn <%= s.chosenIntuition?.whenValue %>, dann muss dieser Abstand §|a-a_n|§ zwischen den Folgegliedern und dem Grenzwert beliebig klein werden. Was bedeutet das?
-
-[[Weiter|Formale Definition des Grenzwerts finden 2]]
+:: Abschlussreflexion {"position":"50,850","size":"100,100"}
+1. Reread the opinion you wrote and fill in the evaluation grid below. 
+2. Write two things that you did well and two things that you need to improve in the box titled further comments.
 
 
 
+:: Aktivierung Vorwissen {"position":"50,200","size":"100,100"}
+Read the information on how to structure your opinion in order to make it stronger. Then complete the tasks below to practice this structure.
 
-:: Formale Definition des Grenzwerts finden 2 {"position":"1025,1025","size":"100,100"}
-Nehmen wir irgendeinen beliebig kleinen Maximalabstand §\varepsilon > 0§. Wenn <%= s.chosenIntuition?.whenValue %>, dann ist ab irgendeinen Folgeglied der Abstand §|a_n-a|§ kleiner als unser vorgegebener Maximalabstand. Sprich es gibt irgendein Index §N§ ab dem §|a_n-a|<\epsilon§ für alle Folgeglieder §a_n§ mit §n\ge N§ ist. Fast alle Folgenglieder haben einen Abstand vom Grenzwert kleiner als unseren vorgegeben Maximalabstand.
+**Remember:**
 
-Dabei ist es egal, wie klein wir §\varepsilon§ wählen. Wir können §\varepsilon = \tfrac{1}{1000}§ oder §\varepsilon=\tfrac{1}{1000000000}§ setzen. Jeweils unterscheiden sich fast alle Folgeglieder um weniger als das jeweilige §\varepsilon§ vom Grenzwert. Bei einem kleineren Maximalabstand §\varepsilon§ ist dies nur gegebenenfalls später in der Folge der Fall.
+1. Beginning: Give your opinion (and general information about the topic)
+2. Middle: Give reasons for your opinion and explain it
+3. End: Sum up your opinion in one or two sentences.
 
-Damit haben wir alles zusammen, um den Grenzwert formal zu definieren. Versuche selbst eine formale Definition des Grenzwerts zu formulieren:
+**Exkurs:** Use the [[list of useful vocabulary|Exkurs]] of the last lesson
 
-<textarea id="textarea-definition" rows=4 style="width: 100%" placeholder="Gebe deine Definition ein und drücke Enter" />
+**TODO: Task einblenden**
 
-<script>
-   function submit() {
-     const value = $("#textarea-definition").val().trim()
-     if (value) window.story.state.givenDefinition = value
-     story.show("Formale Definition des Grenzwerts")
-   }
-
-  window.story.state.givenDefinition = "(Du hast keine Antwort gegeben)"
-  
-  $("#textarea-definition").keypress(function (event) {
-    if (event.key === "Enter") submit();
-  })
-  
-  $("a").click(submit)
-</script>
+[[Auswahl]]
 
 
-[[Absenden|Formale Definition des Grenzwerts]]
+
+:: Auswahl {"position":"50,350","size":"100,100"}
+In the following you shall write an opinion for the question "Should students have homework every day?". How do you want to do it?
+
+* [[Write the opinion step by step (more easy)|Pfad 2: Übung 1]]
+* [[Write the opinion at once (more demanding)|Pfad 1: Übung]]
 
 
-:: Nach Auswahl der Intuition {"position":"1025,775","size":"100,100"}
-Du hast gewählt: <%= window.story.state.chosenIntuition?.value %>
+:: Exkurs {"position":"225,200","size":"100,100"}
+- first
+- on the other hand
+- I agree
+- third
+- Finally
+- however
+- to begin with
+- I don’t think
+- in conclusion
 
-Damit hast du eine gute intuitive Vorstellung vom Grenzwert. Liefert diese auch eine gute mathematische Definition des Begriffs? Sprich: Ist diese Vorstellung präzise genug, dass alle Personen den Grenzwertbegriff gleich verwenden und es keine Mehrdeutigkeiten gibt?
-
-* [[Nein, hierzu braucht es eine formale Definition des Grenzwerts|Formale Definition des Grenzwerts finden]]
-* [[Nein, aber eine intuitive Vorstellung reicht vollkommen aus|Erklärung, wieso es eine formale Definition braucht]]
-* [[Ja, es ist bereits eine formale Definition des Grenzwerts|Erklärung, wieso es keine formale Definition ist]]
+[[Back|Aktivierung Vorwissen]] 
 
 
-:: Start {"position":"900,400","size":"100,100"}
-Was ist die Intuition hinter dem Grenzwert einer Folge?
+:: Lebensweltbezug herstellen {"position":"50,50","size":"100,100"}
+Read the following statement and share your opinion on it with your neighbour. Use vocabulary from last lesson like “I agree,” “I think,” “I disagree,” “In my opinion”, “I don’t think”
 
-Betrachten wir hierzu die Folge §a_n = \frac{1}{n}§. Die ersten 10 Folgenglieder sind:
+* "Cats are better than dogs"
+* "Homework should be banned."
+* "Video games are a waste of time."
+* "School should start later in the morning."
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/First_members_of_harmonic_sequence.svg" width=500 />
-<p><small>Quelle: <a href="https://commons.wikimedia.org/wiki/File:First_members_of_harmonic_sequence.svg">https://commons.wikimedia.org/wiki/File:First_members_of_harmonic_sequence.svg</a></small></p>
+[[Nächster Schritt|Aktivierung Vorwissen]]
 
-Rein intuitiv: Was ist deiner Meinung nach der Grenzwert dieser Funktion?
 
-<!-- TODO:  Hier sollte ein entsprechendes Feedback angezeigt werden. -->
-* [[§\frac 1{10}§|falscher_grenzwert]]
-* [[§0§|welche_intuition]]
-* [[§-\frac 1{10}§|falscher_grenzwert]]
-* [[Die Folge hat keinen Grenzwert|falscher_grenzwert]]
+:: Pfad 1: Übung {"position":"300,600","size":"100,100"}
+Should students have homework every day?
+
+Remember to
+
+→ structure your text in beginning, middle and end
+→ use useful phrases and linking words for writing an opinion
+→ check your text for mistakes when you are finished
+→ Write at least … words.	
+→ Differenzierung nach Wortanzahl
+
+[[Next|Abschlussreflexion]] 
+
+
+:: Pfad 2: Übung 1 {"position":"50,475","size":"100,100"}
+Should students have homework every day? - Write the beginning of your opinion on this question. 
+
+Remember that in the beginning you simply state what you think about the topic. You can also add some general information about the topic, in this case homework.
+
+Useful words to start
+
+I think… In my opinion … I believe… I don’t think … I don’t believe…
+
+[[Next|Pfad 2: Übung 2]]
 
 
 
 
-:: falscher_grenzwert {"position":"775,525","size":"100,100"}
-Die Antwort ist leider falsch. [[Probiere es noch einmal|Start]].
+:: Pfad 2: Übung 2 {"position":"50,600","size":"100,100"}
+Should students have homework every day? - Write the middle of your opinion on this question. Try to use linking words to improve your writing.
 
 
-:: intuition-choice {"position":"1025,650","size":"100,100"}
-Deine Antwort: <%- s.givenIntuition %>
-
-Es gibt mehrere intuitive Erklärungen, wieso der Grenzwert der Folge §a_n=\tfrac 1n§ gleich §a=0§ ist. Welche der folgenden Erklärungen kommt deiner Antwort am Nähsten oder gefällt dir am Besten?
-
-* <a0 data-choice=1>Die Folge §a_n§ strebt gegen den Grenzwert §a§.</a>
-* <a0 data-choice=2>Die Folge §a_n§ kommt dem Grenzwert  §a§ beliebig nahe.</a>
-* <a0 data-choice=3>Je größer §n§ ist, desto mehr nähert sich §a_n§ dem Grenzwert §a§ an.</a>
-* <a0 data-choice=4>Die Folge §a_n§ erreicht den Grenzwert §a§ im Unendlichen.</a>
-
-<script>
-	$("a").click(function () {
-    	const choice = this.getAttribute("data-choice") ?? null
-        
-        window.story.state.chosenIntuition = {
-        	value: this.innerHTML,
-            whenValue: getWhenValue(choice)
-        }
-    
-    	story.show("Nach Auswahl der Intuition")
-    });
-    
-    function getWhenValue(choice) {
-    	switch (choice) {
-        	case "1": return "die Folge §a_n§ gegen den Grenzwert §a§ strebt";
-            case "2": return "die Folge §a_n§ dem Grenzwert §a§ beliebig nah kommt";
-            case "3": return "sich die Folge §a_n§ mit größer werdenden §n§ immer mehr dem Grenzwert §a§ annähert";
-            case "4": return "die Folge §a_n§ den Grenzwert §a§ im Unendlichen erreicht.";
-        }
-    }
-</script>
-
-<!-- Damit Twine die Verbindung zur nächsten Passage erkennt, verlinken wir diese in einem versteckten Div -->
-<div->[[Nach Auswahl der Intuition]]</div>
+Remember that in the middle you give reasons for your opinion, which you stated in the beginning. This means you explain your opinion.
 
 
-:: welche_intuition {"position":"1025,525","size":"100,100"}
-Das ist richtig! Die Folge §a_n = \frac{1}{n}§ hat den Grenzwert §0§. Wieso hast du diese Zahl gewählt?
+Useful words to explain your opinion are linking words like:
+because - because of - although - however - but - as …
 
-<input type="text" style="width: 100%" id="input-intuition" placeholder="Gebe hier deine Antwort ein und drücke Enter" />
-
-<script>
-   function submit() {
-     const value = $("#input-intuition").val().trim()
-     if (value) window.story.state.givenIntuition = value
-     story.show("intuition-choice")
-   }
-
-  window.story.state.givenIntuition = "(Du hast keine Antwort gegeben)"
-  
-  $("#input-intuition").keypress(function (event) {
-    if (event.key === "Enter") submit();
-  })
-  
-  $("a").click(submit)
-</script>
-
-[[Absenden|intuition-choice]]
+[[Next|Pfad 2: Übung 3]] 
 
 
+:: Pfad 2: Übung 3 {"position":"50,725","size":"100,100"}
+Should students have homework every day? - Write the end of your opinion on this question. Try to use linking words and useful phrases to improve your writing.
+
+Remember in the end you you need good phrase to sum up your text. You can write your opinion and a short explanation of it.
 
 
+Useful words and phrases
+To sum up - In conclusion - Finally - because - in addition - although - and - but …
 
-:: StoryScript [script]
-$(function () {
-  const script1 = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js";
-  const script2 = "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-  $.getScript(script1, () => {
-    $.getScript(script2, () => {
-      function renderLatex() {
-        renderMathInElement(document.body, {
-          delimiters: [
-              {left: '§§', right: '§§', display: true},
-              {left: '§', right: '§', display: false},
-          ],
-          throwOnError : false
-        });
-      }
-      
-      renderLatex();
-      $(window).on("sm.passage.shown", renderLatex);
-    });
-  });
-});
-
-:: StoryStylesheet [stylesheet]
-@import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
-
-a {
- color: #4169E1; 
-}
+[[Next|Abschlussreflexion]]
