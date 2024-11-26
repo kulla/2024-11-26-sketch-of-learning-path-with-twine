@@ -1,5 +1,5 @@
-# 2023-12-29-grenzwert-einer-folge-in-twine
+# 2024-11-26-sketch-of-learning-path-with-twine
 
-Prototyp einer interaktiven Geschichte zur Einführung des Grenzwerts mit Hilfe von [Twine](https://twinery.org/).
+Sketch of a learning path in English made with [Twine](https://twinery.org/).
 
-**Link: https://kulla.github.io/2023-12-29-grenzwert-einer-folge-in-twine/**
+**Link: https://kulla.github.io/2024-11-26-sketch-of-learning-path-with-twine/**
