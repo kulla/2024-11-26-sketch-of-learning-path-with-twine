@@ -12,19 +12,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Flatpak
+      - name: Download and install tweego
         run: |
-          sudo apt update
-          sudo apt install flatpak flatpak-builder -y
-          sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-          flatpak --version
-          flatpak-builder --version
-
-      - name: Install platform and SDK for flatpak
-        run: sudo flatpak install --assumeyes flathub org.freedesktop.Platform//23.08 org.freedesktop.Sdk//23.08
-
-      - name: Install tweego
-        run: make install
+          wget -O tweego.zip https://github.com/tmedwards/tweego/releases/download/v2.1.1/tweego-2.1.1-linux-x64.zip
+          scripts/setup.sh tweego.zip /usr/local/bin
 
       - name: Build the story `story.twee`
         run: make run
